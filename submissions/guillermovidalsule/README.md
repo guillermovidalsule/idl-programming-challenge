@@ -1,4 +1,4 @@
-# Physical Memory Protection Configuration Verifier
+# Physical Memory Protection - Configuration Verifier
 
 This purpose of this tool is to verify whether a given access
 with privilege mode _M_ can undertake an operation of type _O_
@@ -10,13 +10,13 @@ The folders and files are the following:
 
 | Name | Type  | Description |
 | :--- | :---: | :---------- |
-| `README.md` | File | Informational README about the project. |
-| `src` | Directory | Source code. |
 | `bin` | Directory | Output directory where the executable is placed. |
-| `pmp_check.gpr` | File | Project configuration file. |
-| `alire.toml` | File | Crate settings. |
 | `config` | Directory | Further configuration of the project. |
-| `configuration.txt` | File | Basic configuration to test the program. |
+| `src` | Directory | Source code. |
+| `alire.toml` | File | Crate settings. |
+| `configuration.txt` | File | Basic PMP configuration to test the program. |
+| `pmp_check.gpr` | File | Project configuration file. |
+| `README.md` | File | Informational README about the project. |
  
 There could be more entries, but they are out of the scope for the coding challenge.
 
@@ -46,7 +46,7 @@ project-dir$ alr build
 Running it is as simple as:
 
 ```
-project-dir$ ./bin/pmp_check
+project-dir$ ./bin/pmp_check <path-to-config-file> <address> <privilege-mode> <operation>
 ```
 
 > [!NOTE]
@@ -62,3 +62,8 @@ I used the GNAT FSF 14 toolchain paired with Alire. In particular:
 
 This does not imply that other versions will not work, you could even try
 using `gnatmake`, but I will not verify whether they are compatible or not.
+
+## Final Remarks
+
+I chose Ada because it is a statically and strongly typed language like IDL,
+ which is mentioned in the project description.
