@@ -1,4 +1,4 @@
-# Physical Memory Protection Configuraton Verifier
+# Physical Memory Protection Configuration Verifier
 
 This purpose of this tool is to verify whether a given access
 with privilege mode _M_ can undertake an operation of type _O_
@@ -16,6 +16,7 @@ The folders and files are the following:
 | `pmp_check.gpr` | File | Project configuration file. |
 | `alire.toml` | File | Crate settings. |
 | `config` | Directory | Further configuration of the project. |
+| `configuration.txt` | File | Basic configuration to test the program. |
  
 There could be more entries, but they are out of the scope for the coding challenge.
 
